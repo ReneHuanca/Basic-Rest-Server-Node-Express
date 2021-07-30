@@ -2,7 +2,7 @@ const { response } = require('express');
 
 const usersGet = (req, res = response) => {
     // To query params
-    const query = req.query;
+    const { nombre = "no name", apikey } = req.query;  // ?nombre=juan&apikey
 
     res.json({
         msg: 'get API'
